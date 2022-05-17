@@ -92,7 +92,7 @@ function Card({ children }) {
       p="40px"
       m="20px"
       position="relative"
-      bg="#2e3748"
+      bg="#0D0628"
       rounded="10px"
       transition="all ease-in-out 0.2s"
       _hover={{ top: "-8px" }}

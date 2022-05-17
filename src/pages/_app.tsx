@@ -29,9 +29,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ChakraProvider theme={theme}>
         <Header />
-
         <Component {...pageProps} />
-
         <Footer />
       </ChakraProvider>
     </>
