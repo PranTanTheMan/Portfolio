@@ -8,7 +8,7 @@ const theme = extendTheme({
   styles: {
     global: () => ({
       body: {
-        fontFamily: "arial, sans-serif",
+        fontFamily: "Darker Grotesque, sans-serif",
         color: "white",
         backgroundColor: "secondary",
       },
