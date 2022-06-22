@@ -3,16 +3,15 @@
 Proper Readme will follow
 
 ## Stack
+
 - Typescript
 - ChakraUI
 - NextJS
 - Lightweight
 - Google Analytics
 - React Icons
-## Setup
 
-Click use this template or clone with
-`git clone https://github.com/HazimAr/Nextjs-ChakraUI-Boilerplate`
+## Setup
 
 install dependencies `npm i` or `yarn`
 
