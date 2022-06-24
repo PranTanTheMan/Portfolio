@@ -11,18 +11,7 @@ export default function Main() {
       py="10px"
       as="header"
     >
-      <Heading>SI</Heading>
-      <HStack justify="center" align="center">
-        <NextChakraLink href="https://github.com/HazimAr/" aria-label="Github">
-          <FaGithub size="30px" />
-        </NextChakraLink>
-        <NextChakraLink
-          href="https://www.linkedin.com/in/hazim-arafa-a439aa205/"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin size="30px" />
-        </NextChakraLink>
-      </HStack>
+      <Heading>Pran</Heading>
     </HStack>
   );
 }

@@ -5,12 +5,20 @@ const theme = extendTheme({
     secondary: "#F9DBBD",
     primary: "#0D0628",
   },
+  fonts: {
+    heading: "Montserrat",
+    body: "Montserrat",
+  },
   styles: {
     global: () => ({
       body: {
-        fontFamily: "Darker Grotesque, sans-serif",
+        fontFamily:
+          "Montserrat-Regular, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
         color: "white",
         backgroundColor: "secondary",
+      },
+      html: {
+        scrollBehavior: "smooth",
       },
       "&::-webkit-scrollbar": {
         width: "0.5em",
