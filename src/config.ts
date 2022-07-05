@@ -11,7 +11,7 @@ type MetaType = {
 };
 
 const META: MetaType = {
-  title: "Pranith Molakalapalli Portfolio",
+  title: "Pranith's Portfolio",
   lang: "en-us",
   description: "Portfolio created by Pranith Molakalapalli ",
   url: "",

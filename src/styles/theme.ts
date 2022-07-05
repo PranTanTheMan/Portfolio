@@ -2,12 +2,14 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   colors: {
-    secondary: "#F9DBBD",
-    primary: "#0D0628",
+    secondary: "#1E2029",
+    primary: "#9A6AFF",
+    tertiary: "#FFFFFF",
+    quaternary: "#E3E3E3",
   },
   fonts: {
-    heading: "Montserrat",
-    body: "Montserrat",
+    heading: "General Sans, sans-serif",
+    body: "General Sans, sans-serif",
   },
   styles: {
     global: () => ({
@@ -29,7 +31,7 @@ const theme = extendTheme({
       },
       "&::-webkit-scrollbar-thumb": {
         background: "primary",
-        borderRadius: "50px",
+        borderRadius: "2px",
       },
     }),
   },
