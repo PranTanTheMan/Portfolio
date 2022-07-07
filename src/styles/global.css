@@ -1,0 +1,58 @@
+.heroImage {
+  filter: drop-shadow(4px 4px 4px rgb(0, 0, 0));
+  animation: image-floating 2s infinite ease-in-out alternate forwards;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.heroImage:hover {
+  animation: still infinite ease-in;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.hero-image-container::after {
+  content: "";
+  position: absolute;
+  bottom: -90px;
+  width: 30%;
+  height: 10px;
+  background: rgba(1, 0, 0, 0.49);
+  filter: blur(2px);
+  border-radius: 50%;
+  animation: floating 2s infinite ease-in alternate forwards;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+.hero-image-container:hover::after {
+  animation: still infinite ease-in-out alternate forwards;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    width: 30%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+@keyframes image-floating {
+  0% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes still {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 10%;
+  }
+}

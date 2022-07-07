@@ -1,10 +1,8 @@
-import { Box, Flex, Heading, Text, VStack, Spacer } from "@chakra-ui/react";
-import Image from "next/image";
-
+import Hero from "@components/hero";
 export default function Home() {
   return (
     <>
-      <Image src />
+      <Hero />
     </>
   );
 }
