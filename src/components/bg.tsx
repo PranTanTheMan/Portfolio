@@ -7,6 +7,7 @@ const Bg = () => {
     return {
       background: {
         color: "#1e202960",
+        size: "50%",
       },
       fullscreen: {
         enable: true,

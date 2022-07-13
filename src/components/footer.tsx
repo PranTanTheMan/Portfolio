@@ -1,16 +1,43 @@
-import { Box } from "@chakra-ui/react";
+// import { Box, IconButton } from "@chakra-ui/react";
+// import NextChakraLink from "./nextChakraLink";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Flex, VStack, Box, IconButton } from "@chakra-ui/react";
 
-export default function footer() {
+export default function Footer() {
   return (
-    <Box
-      as="footer"
-      position="fixed"
-      left="0"
-      bottom="0"
-      width="100%"
-      height="200px"
-      display="grid"
-      justifyItems="flex-start"
-    ></Box>
+    <>
+      <Flex justifyContent="flex-start" ml="20px" mt="100px">
+        <VStack spacing="20px">
+          <Box>
+            <IconButton
+              aria-label="GithubButton"
+              icon={<FaGithub fontSize="30px" />}
+              variant="unstyled"
+            />
+          </Box>
+          <Box>
+            <IconButton
+              aria-label="LinkedinButton"
+              icon={<FaLinkedin fontSize="30px" />}
+              variant="unstyled"
+            />
+          </Box>
+          <Box>
+            <IconButton
+              aria-label="TwitterButton"
+              icon={<FaTwitter fontSize="30px" />}
+              variant="unstyled"
+            />
+          </Box>
+          <Box>
+            <IconButton
+              aria-label="instagramButton"
+              icon={<FaInstagram fontSize="30px" />}
+              variant="unstyled"
+            />
+          </Box>
+        </VStack>
+      </Flex>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import "styles/global.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import Footer from "@components/footer";
+
 import Header from "@components/header";
 import theme from "@styles/theme";
 import { pageview } from "@lib/gtag";
@@ -9,6 +9,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import Footer from "@components/footer";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

@@ -8,14 +8,14 @@ const theme = extendTheme({
     quaternary: "#E3E3E3",
   },
   fonts: {
-    heading: "General Sans, sans-serif",
-    body: "General Sans, sans-serif",
+    body: "Roboto Mono, monospace",
+    heading: "Roboto Mono, monospace",
   },
   styles: {
     global: () => ({
       body: {
         fontFamily:
-          "Montserrat-Regular, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+          "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
         color: "white",
         backgroundColor: "secondary",
       },
