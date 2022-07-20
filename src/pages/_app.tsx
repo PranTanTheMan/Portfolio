@@ -31,8 +31,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ChakraProvider theme={theme}>
         <Header />
+        {/* <Footer /> */}
         <Component {...pageProps} />
-        <Footer />
       </ChakraProvider>
     </>
   );

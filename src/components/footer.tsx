@@ -6,7 +6,7 @@ import { Flex, VStack, Box, IconButton } from "@chakra-ui/react";
 export default function Footer() {
   return (
     <>
-      <Flex justifyContent="flex-start" ml="20px" mt="100px">
+      <Flex justifyContent="flex-start" ml="20px" mt="100px" position="sticky">
         <VStack spacing="20px">
           <Box>
             <IconButton

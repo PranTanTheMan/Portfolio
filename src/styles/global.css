@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --font-museo-moderno: "MuseoModerno", cursive;
 }
@@ -68,13 +74,47 @@
   font-size: large;
 }
 
-.nav-links {
-  font-family: var(--font-museo-moderno);
+li,
+.contact-button {
+  font-family: "MuseoModerno", cursive;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
-.nav-link-button {
-  font-family: var(--font-museo-moderno);
-  font-weight: 400;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav-links {
+  margin-left: 80px;
+}
+
+.Main {
+  padding: 30px 100px 0 100px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: rgba(30, 32, 41, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(1, 1, 1, 0.37);
 }

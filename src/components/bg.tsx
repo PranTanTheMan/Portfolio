@@ -10,7 +10,7 @@ const Bg = () => {
         size: "50%",
       },
       fullscreen: {
-        enable: true,
+        enable: false,
         zIndex: -1,
       },
       interactivity: {
