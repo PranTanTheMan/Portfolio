@@ -1,19 +1,72 @@
 import React from "react";
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import Bg from "@components/bg";
 import NextChakraLink from "./nextChakraLink";
 function Hero() {
   return (
     <>
-      <Flex flexDir="column" ml="300px">
-        <Text color="#9a6aff" letterSpacing="3px" fontWeight="500">
-          Hello there! I am
-        </Text>
-        <Text fontSize="7xl" className="hero-name">
-          Pranith Molakalapalli
-        </Text>
-      </Flex>
+      <Box className='container' ml={"10rem"} mt={"8rem"}>
+        <Flex flexDir='column' alignItems={"flex-start"} h={"100vh"} w={"100%"}>
+          <Text
+            fontSize={"1.2rem"}
+            color='primary'
+            letterSpacing='3px'
+            fontWeight='500'
+            mb={"0px"}
+            lineHeight='0px'
+          >
+            Hello there! My name is
+          </Text>
+          <Text
+            fontSize='7rem'
+            className='hero-name'
+            mt={"0px"}
+            flexShrink={"1"}
+            maxWidth={"55rem"}
+            lineHeight='130px'
+          >
+            Pranith Molakalapalli.
+          </Text>
+          <Text
+            fontSize='6rem'
+            className='hero-name'
+            mt={"0px"}
+            flexShrink={"1"}
+            maxWidth={"55rem"}
+            lineHeight='30px'
+            mb={"3rem"}
+            color='textColorLight'
+          >
+            Manipulating the web
+          </Text>
+          <Text
+            w={"800px"}
+            color={"textColorLight"}
+            fontWeight={"600"}
+            fontSize={"1.5rem"}
+            lineHeight='30px'
+            opacity={"40%"}
+          >
+            A self-taught web developer, High School Student, and a programming
+            enthusiast exclusively in React
+          </Text>
+          <NextChakraLink href='mailto:pranithmolakalapalli@gmail.com'>
+            <Button
+              mt={"2rem"}
+              variant={"unstyled"}
+              borderRadius={"27px"}
+              width={"150px"}
+              height={"50px"}
+              border='1px solid #9a6aff'
+              fontWeight={"700"}
+              fontSize={"1.2rem"}
+              _hover={{ bgColor: "#996aff36" }}
+            >
+              Contact Me
+            </Button>
+          </NextChakraLink>
+        </Flex>
+      </Box>
     </>
   );
 }

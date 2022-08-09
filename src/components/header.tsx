@@ -5,42 +5,58 @@ import NextChakraLink from "./nextChakraLink";
 export default function Main() {
   return (
     <>
-      <header className="navbar">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="40"
-          fill="currentColor"
-          className="bi bi-triangle logo"
-          viewBox="0 0 16 16"
-        >
-          <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z" />
-        </svg>
+      <header className='navbar'>
+        <NextChakraLink href='/'>
+          <Text color='textColor' fontSize='36px' fontWeight={600}>
+            PM
+          </Text>
+        </NextChakraLink>
         <nav>
-          <ul className="nav-links">
+          <ul className='nav-links'>
             <li>
-              <NextChakraLink href="/">
-                <Text>About</Text>
+              <NextChakraLink href='#about'>
+                <Text
+                  _hover={{
+                    color: "textColorHover",
+                    transition: "all 0.3s ease-in-out",
+                  }}
+                  color='textColor'
+                  fontSize={"24px"}
+                  fontWeight={"400"}
+                  transition={"all 0.3s ease-in-out"}
+                >
+                  About
+                </Text>
               </NextChakraLink>
             </li>
             <li>
-              <NextChakraLink href="/">
-                <Text>Work</Text>
+              <NextChakraLink href='#work'>
+                <Text color='textColor' fontSize={"24px"} fontWeight={"400"}>
+                  Work
+                </Text>
               </NextChakraLink>
             </li>
             <li>
-              <NextChakraLink href="/">
-                <Text>Projects</Text>
+              <NextChakraLink href='#projects'>
+                <Text color='textColor' fontSize={"24px"} fontWeight={"400"}>
+                  Projects
+                </Text>
               </NextChakraLink>
             </li>
           </ul>
         </nav>
         <Button
-          fontWeight="300"
-          className="contact-button"
-          variant="unstyled"
-          bg="#9a6aff"
-          width="150px"
+          className='contact-button'
+          variant='unstyled'
+          bg='#9a6aff'
+          width='150px'
+          color='textColor'
+          fontSize={"18px"}
+          fontWeight={"400"}
+          _hover={{
+            bg: "#9c4aff",
+            transform: "scale(0.98)",
+          }}
         >
           {/* <Text className="nav-link-button">Contact Me</Text> */}
           Contact Me

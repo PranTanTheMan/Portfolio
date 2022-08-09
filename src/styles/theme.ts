@@ -4,18 +4,19 @@ const theme = extendTheme({
   colors: {
     secondary: "#1E2029",
     primary: "#9A6AFF",
-    tertiary: "#FFFFFF",
+    textColor: "#FFFFFF",
     quaternary: "#E3E3E3",
+    textColorLight: "rgba(186, 186, 186, 0.574)",
+    textColorHover: "#e9e9e9",
   },
   fonts: {
-    body: "Roboto Mono, monospace",
-    heading: "Roboto Mono, monospace",
+    body: "Darker Grotesque, sans-serif",
+    heading: "Darker Grotesque, sans-serif",
   },
   styles: {
     global: () => ({
       body: {
-        fontFamily:
-          "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+        fontFamily: "Darker Grotesque",
         color: "white",
         backgroundColor: "secondary",
       },

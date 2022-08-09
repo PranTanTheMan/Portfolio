@@ -1,12 +1,12 @@
 import Hero from "@components/hero";
-import { Box } from "@chakra-ui/react";
+
+import About from "@components/about";
 
 export default function Home() {
   return (
     <>
-      <section className="Main">
-        <Hero />
-      </section>
+      <Hero />
+      <About />
     </>
   );
 }
