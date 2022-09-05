@@ -31,7 +31,7 @@
     "react-icons": "^4.4.0",
     "react-tsparticles": "^2.2.4",
     "styled-components": "^5.3.5",
-    "three": "^0.143.0",
+    "three": "^0.144.0",
     "tsparticles": "^2.2.4"
   },
   "devDependencies": {
