@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -8,13 +8,10 @@
 
 html,
 body {
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   margin: 0;
   padding: 0;
 }
-
-
-
 
 /*  */
 /* NAVIGATION */
@@ -37,7 +34,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-
 }
 
 .logo {
@@ -64,22 +60,23 @@ header {
 .navbar {
   position: sticky;
   top: 0;
-  
   width: 100%;
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-  background: rgba(30, 32, 41, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgb(30, 32, 41, 0.2);
   box-shadow: 0 8px 32px 0 rgba(1, 1, 1, 0.37);
-  
+  z-index: 9999;
 }
 
-.no-class-name-for-testing-purposes-only{
-  color: rgba(186, 186, 186, 0.574);
-  color: #996aff36;
-  color: #b1b1b1;
+.no-class-name-for-testing-purposes-only {
+  color: #1a1a24;
+  color: #191b22;
 }
 
 .container {
   float: left;
-  
+}
+
+.hero-button:hover {
+  background-color: #996aff39;
 }

@@ -21,7 +21,6 @@ function Hero() {
             fontSize='7rem'
             className='hero-name'
             mt={"0px"}
-            flexShrink={"1"}
             maxWidth={"55rem"}
             lineHeight='130px'
           >
@@ -46,12 +45,14 @@ function Hero() {
             fontSize={"1.5rem"}
             lineHeight='30px'
             opacity={"40%"}
+            zIndex={"-1"}
           >
             A self-taught web developer, High School Student, and a programming
             enthusiast exclusively in React
           </Text>
           <NextChakraLink href='mailto:pranithmolakalapalli@gmail.com'>
             <Button
+              zIndex={"0"}
               mt={"2rem"}
               variant={"unstyled"}
               borderRadius={"27px"}
@@ -60,7 +61,7 @@ function Hero() {
               border='1px solid #9a6aff'
               fontWeight={"700"}
               fontSize={"1.2rem"}
-              _hover={{ bgColor: "#996aff36" }}
+              className='hero-button'
             >
               Contact Me
             </Button>

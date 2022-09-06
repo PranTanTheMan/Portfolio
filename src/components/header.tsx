@@ -17,7 +17,7 @@ export default function Main() {
               <NextChakraLink href='#about'>
                 <Text
                   _hover={{
-                    color: "textColorHover",
+                    color: "primary",
                     transition: "all 0.3s ease-in-out",
                   }}
                   color='textColor'
@@ -31,21 +31,55 @@ export default function Main() {
             </li>
             <li>
               <NextChakraLink href='#work'>
-                <Text color='textColor' fontSize={"24px"} fontWeight={"400"}>
+                <Text
+                  _hover={{
+                    color: "primary",
+                    transition: "all 0.3s ease-in-out",
+                  }}
+                  color='textColor'
+                  fontSize={"24px"}
+                  fontWeight={"400"}
+                  transition={"all 0.3s ease-in-out"}
+                >
                   Work
                 </Text>
               </NextChakraLink>
             </li>
             <li>
               <NextChakraLink href='#projects'>
-                <Text color='textColor' fontSize={"24px"} fontWeight={"400"}>
+                <Text
+                  _hover={{
+                    color: "primary",
+                    transition: "all 0.3s ease-in-out",
+                  }}
+                  color='textColor'
+                  fontSize={"24px"}
+                  fontWeight={"400"}
+                  transition={"all 0.3s ease-in-out"}
+                >
                   Projects
+                </Text>
+              </NextChakraLink>
+            </li>
+            <li>
+              <NextChakraLink href='#projects'>
+                <Text
+                  _hover={{
+                    color: "primary",
+                    transition: "all 0.3s ease-in-out",
+                  }}
+                  color='textColor'
+                  fontSize={"24px"}
+                  fontWeight={"400"}
+                  transition={"all 0.3s ease-in-out"}
+                >
+                  Contact
                 </Text>
               </NextChakraLink>
             </li>
           </ul>
         </nav>
-        <Button
+        {/* <Button
           className='contact-button'
           variant='unstyled'
           bg='#9a6aff'
@@ -58,9 +92,8 @@ export default function Main() {
             transform: "scale(0.98)",
           }}
         >
-          {/* <Text className="nav-link-button">Contact Me</Text> */}
           Contact Me
-        </Button>
+        </Button> */}
       </header>
     </>
   );
