@@ -32,7 +32,7 @@
     "react-tsparticles": "^2.3.1",
     "styled-components": "^5.3.5",
     "three": "^0.144.0",
-    "tsparticles": "^2.2.4"
+    "tsparticles": "^2.3.1"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
