@@ -3,10 +3,11 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     secondary: "#1E2029",
-    primary: "#9A6AFF",
+    primary: "#fff",
     textColor: "#FFFFFF",
     quaternary: "#E3E3E3",
-    textColorLight: "rgba(186, 186, 186, 0.574)",
+    textColorLight: "rgba(176, 176, 176, 0.274)",
+    bgColorLight: "rgba(123, 123, 123, 0.353)",
     textColorHover: "#e9e9e9",
   },
   fonts: {
@@ -17,23 +18,16 @@ const theme = extendTheme({
     global: () => ({
       body: {
         fontFamily: "Darker Grotesque",
+        backgroundImage: "linear-gradient(to right bottom, #56174d, #4d1545, #44133d, #3b1136, #330f2e);",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
         color: "white",
-        backgroundColor: "secondary",
+
       },
       html: {
         scrollBehavior: "smooth",
       },
-      "&::-webkit-scrollbar": {
-        width: "0.5em",
-      },
-      "&::-webkit-scrollbar-track": {
-        borderRadius: "0px",
-        background: "transparent",
-      },
-      "&::-webkit-scrollbar-thumb": {
-        background: "primary",
-        borderRadius: "2px",
-      },
+      
     }),
   },
 });

@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap");
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.cursor {
+  cursor: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,70 +21,63 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  cursor: none;
+  color: rgba(53, 53, 53, 0.353);
+}
+
+/*  */
+/* HERO */
+/*  */
+
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.animate:nth-child(1) {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0px);
+  transition: all 1.5s;
+}
+
+.animate:nth-child(2) {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+  transition: all 1.5s;
+}
+
+/* center container */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+.typewriter {
+  font-weight: 500;
+  color: rgba(132, 132, 132, 0.483);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.nextpage-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
 /*  */
 /* NAVIGATION */
 /*  */
-
-.circle-menu-item {
-  width: 100px;
-  font-size: large;
-}
-
-li,
-.contact-button {
-  font-family: "Darker Grotesque", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5%;
-}
-
-.logo {
-  cursor: pointer;
-}
-
-.nav-links {
-  list-style: none;
-}
-
-.nav-links li {
-  display: inline-block;
-  padding: 0 20px;
-}
-
-.nav-links {
-  margin-left: 80px;
-}
-
-.Main {
-  padding: 30px 100px 0 100px;
-}
-
-.navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  background: rgb(30, 32, 41, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(1, 1, 1, 0.37);
-  z-index: 9999;
-}
-
-.no-class-name-for-testing-purposes-only {
-  color: #1a1a24;
-  color: #191b22;
-}
-
-.container {
-  float: left;
-}
-
-.hero-button:hover {
-  background-color: #996aff39;
-}

@@ -1,71 +1,101 @@
-import React from "react";
-import { Box, Text, Flex, Button } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import NextChakraLink from "./nextChakraLink";
+import React, { useEffect } from "react";
+import { Box, Text, Flex, useBreakpointValue } from "@chakra-ui/react";
+import Typewriter from "typewriter-effect";
+
 function Hero() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        } else {
+          entry.target.classList.remove("animate");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+  const nameSize = useBreakpointValue(
+    {
+      base: "5xl",
+      lg: "9xl",
+    },
+    {
+      fallback: "md",
+    }
+  );
+  const size = useBreakpointValue(
+    {
+      base: "xl",
+      md: "3rem",
+    },
+    {
+      fallback: "md",
+    }
+  );
+  const introSize = useBreakpointValue(
+    {
+      base: "xl",
+      md: "3rem",
+    },
+    {
+      fallback: "md",
+    }
+  );
+  const lineheight = useBreakpointValue(
+    {
+      base: "40px",
+      md: "100px",
+    },
+    {
+      fallback: "md",
+    }
+  );
   return (
     <>
-      <Box className='container' ml={"10rem"} mt={"8rem"}>
-        <Flex flexDir='column' alignItems={"flex-start"} h={"100vh"} w={"100%"}>
-          <Text
-            fontSize={"1.2rem"}
-            color='primary'
-            letterSpacing='3px'
-            fontWeight='500'
-            mb={"0px"}
-            lineHeight='0px'
-          >
-            Hello there! My name is
+      <Box
+        className={"hero-container"}
+        transition={"all 0.5s ease-in-out"}
+        minHeight={"100vh"}
+      >
+        <Text
+          fontWeight={"600"}
+          fontSize={introSize}
+          color={"textColorLight"}
+          transition={"all 0.5s ease-in-out"}
+        >
+          Hi, my name is
+        </Text>
+        <Text
+          lineHeight={lineheight}
+          textAlign={"center"}
+          width={"100%"}
+          fontWeight={"700"}
+          fontSize={nameSize}
+          color={"textColor"}
+          className={"hero-name"}
+          transition={"all 0.5s ease-in-out"}
+          _hover={{ cursor: "none" }}
+        >
+          Pranith Molakalapalli
+        </Text>
+        <Flex className='typewriter' fontSize={size}>
+          {"<"}
+          <Typewriter
+            options={{
+              strings: ["Building", "Designing", "Learning"],
+              deleteSpeed: 50,
+              autoStart: true,
+              loop: true,
+              cursor: " />",
+              cursorClassName: "typewriter-cursor",
+            }}
+          />
+          <Text pl={"5px"}>
+            <a href=''>for the Web</a>
           </Text>
-          <Text
-            fontSize='7rem'
-            className='hero-name'
-            mt={"0px"}
-            maxWidth={"55rem"}
-            lineHeight='130px'
-          >
-            Pranith Molakalapalli.
-          </Text>
-          <Text
-            fontSize='6rem'
-            className='hero-name'
-            mt={"0px"}
-            flexShrink={"1"}
-            maxWidth={"55rem"}
-            lineHeight='30px'
-            mb={"3rem"}
-            color='textColorLight'
-          >
-            Manipulating the web
-          </Text>
-          <Text
-            w={"800px"}
-            color={"textColorLight"}
-            fontWeight={"600"}
-            fontSize={"1.5rem"}
-            lineHeight='30px'
-            opacity={"40%"}
-            zIndex={"-1"}
-          >
-            A self-taught web developer, High School Student, and a programming
-            enthusiast exclusively in React
-          </Text>
-          <NextChakraLink href='mailto:pranithmolakalapalli@gmail.com'>
-            <Button
-              zIndex={"0"}
-              mt={"2rem"}
-              variant={"unstyled"}
-              borderRadius={"27px"}
-              width={"150px"}
-              height={"50px"}
-              border='1px solid #9a6aff'
-              fontWeight={"700"}
-              fontSize={"1.2rem"}
-              className='hero-button'
-            >
-              Contact Me
-            </Button>
-          </NextChakraLink>
         </Flex>
       </Box>
     </>
@@ -73,28 +103,3 @@ function Hero() {
 }
 
 export default Hero;
-
-// <Box className="bg-particle-thing">
-//         <Bg />
-//       </Box>
-//       <Box
-//         className="hero-image-container"
-//         display="flex"
-//         justifyContent="center"
-//         pt="270px"
-//         maxWidth="100%"
-//       >
-//         <NextChakraLink href="/intro" target="_self">
-//           <motion.div whileHover={{ y: -20, scale: 1.05 }}>
-//             <img
-//               // ?ratio is 2.08:1
-//               // lel
-//               width="837px"
-//               height="400px"
-//               src="/business-3d-man-lying-on-stomach-with-laptop.png"
-//               alt="man lying on stomach with laptop"
-//               className="heroImage"
-//             />
-//           </motion.div>
-//         </NextChakraLink>
-//       </Box>
