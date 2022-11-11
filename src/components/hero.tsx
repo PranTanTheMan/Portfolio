@@ -55,11 +55,7 @@ function Hero() {
   );
   return (
     <>
-      <Box
-        className={"hero-container"}
-        transition={"all 0.5s ease-in-out"}
-        minHeight={"100vh"}
-      >
+      <Box className={"hero-container"} transition={"all 0.5s ease-in-out"}>
         <Text
           fontWeight={"600"}
           fontSize={introSize}
@@ -71,7 +67,6 @@ function Hero() {
         <Text
           lineHeight={lineheight}
           textAlign={"center"}
-          width={"100%"}
           fontWeight={"700"}
           fontSize={nameSize}
           color={"textColor"}
@@ -81,7 +76,7 @@ function Hero() {
         >
           Pranith Molakalapalli
         </Text>
-        <Flex className='typewriter' fontSize={size}>
+        <Flex className="typewriter" fontSize={size}>
           {"<"}
           <Typewriter
             options={{
@@ -94,7 +89,7 @@ function Hero() {
             }}
           />
           <Text pl={"5px"}>
-            <a href=''>for the Web</a>
+            <a href="">for the Web</a>
           </Text>
         </Flex>
       </Box>

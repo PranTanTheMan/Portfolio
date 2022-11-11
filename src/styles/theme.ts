@@ -7,7 +7,8 @@ const theme = extendTheme({
     textColor: "#FFFFFF",
     quaternary: "#E3E3E3",
     textColorLight: "rgba(176, 176, 176, 0.274)",
-    bgColorLight: "rgba(123, 123, 123, 0.353)",
+    textDark: "rgba(180, 180, 180, 1)",
+    bgColorLight: "rgba(255, 255, 255, 0.103)",
     textColorHover: "#e9e9e9",
   },
   fonts: {
