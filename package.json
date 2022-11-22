@@ -33,7 +33,7 @@
     "react-tsparticles": "^2.3.3",
     "styled-components": "^5.3.6",
     "three": "^0.145.0",
-    "tsparticles": "^2.3.4",
+    "tsparticles": "^2.5.3",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
