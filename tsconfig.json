@@ -5,10 +5,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
@@ -22,29 +19,14 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
     "paths": {
-      "@components/*": [
-        "components/*"
-      ],
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@lib/*": [
-        "lib/*"
-      ],
-      "@pages/*": [
-        "pages/*"
-      ]
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@lib/*": ["lib/*"],
+      "@pages/*": ["pages/*"]
     },
     "incremental": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"]
 }
