@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Footer from "@components/footer";
 import CustomCursor from "custom-cursor-react";
+
 import "custom-cursor-react/dist/index.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
@@ -26,12 +27,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <div className='cursor'>
+      <div className="cursor">
         <CustomCursor
           targets={[".link", ".your-css-selector"]}
-          customClass='custom-cursor'
+          customClass="custom-cursor"
           dimensions={50}
-          fill='#FFF'
+          fill="#FFF"
           smoothness={{
             movement: 0.35,
             scale: 0.2,
@@ -40,11 +41,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         />
         <Head>
           <title>{META.title}</title>
-          <link rel='icon' href='/favicon.ico' />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <ChakraProvider theme={theme}>
           <Header />
           <Component {...pageProps} />
+          <Footer />
         </ChakraProvider>
       </div>
     </>
