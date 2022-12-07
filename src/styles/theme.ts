@@ -4,9 +4,9 @@ const theme = extendTheme({
   colors: {
     secondary: "#1E2029",
     primary: "#fff",
-    textColor: "#FFFFFF",
     quaternary: "#E3E3E3",
-    textColorLight: "rgba(176, 176, 176, 0.274)",
+    textColorLight: "rgba(176, 176, 176, 0.574)",
+    textColorMed: "rgba(176, 176, 176, 0.7)",
     textDark: "rgba(180, 180, 180, 1)",
     bgColorLight: "rgba(255, 255, 255, 0.103)",
     textColorHover: "#e9e9e9",
@@ -23,7 +23,6 @@ const theme = extendTheme({
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
         color: "white",
-
       },
       html: {
         scrollBehavior: "smooth",
