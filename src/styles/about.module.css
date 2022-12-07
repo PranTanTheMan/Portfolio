@@ -1,41 +1,113 @@
 .aboutContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 500px);
-  grid-template-rows: 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 0px;
-  place-content: center;
-  /*  */
-  padding-top: 70px;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
   .aboutContainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 500px);
-    grid-column-gap: 0px;
-    grid-row-gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    gap: 50px;
+    flex-direction: column;
+  }
+}
+
+/* @media screen and (max-width: 1440px) {
+  .aboutContainer {
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
     place-content: center;
-    /*  */
+
     padding-top: 70px;
   }
 }
 
-.who {
-  grid-area: 1 / 1 / 2 / 2;
-  text-align: left;
+@media screen and (min-width: 390px) {
+  .aboutContainer {
+    display: grid;
+    grid-template-columns: 390px;
+    grid-template-rows: repeat(2, 900px);
+    grid-column-gap: 0px;
+    grid-row-gap: 50px;
+  }
 }
-.stats {
-  grid-area: 1 / 2 / 2 / 3;
+
+@media screen and (min-width: 820px) {
+  .aboutContainer {
+    display: grid;
+    grid-template-columns: 750px;
+    grid-template-rows: repeat(2, 500px);
+    grid-column-gap: 0px;
+    grid-row-gap: 50px;
+  }
+} */
+
+.who {
   text-align: left;
+  width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .who {
+    width: 390px;
+    margin-left: 25px;
+  }
+}
+
+.stats {
+  text-align: left;
+  width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .stats {
+    width: 390px;
+    margin-left: 13px;
+    margin-top: 40px;
+  }
 }
 
 .blob1 {
   position: absolute;
   transform: rotate(15deg);
+  color: #8b217b;
 }
+
+@media screen and (max-width: 768px) {
+  .blob1 {
+    display: none;
+  }
+  .blob2 {
+    display: none;
+  }
+}
+
 .blob2 {
   position: absolute;
   transform: rotate(65deg);
   color: #8b217b;
+}
+
+.myStats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

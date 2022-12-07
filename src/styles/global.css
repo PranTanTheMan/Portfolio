@@ -46,12 +46,12 @@ a {
 
 /* center container */
 .hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  place-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -90,6 +90,12 @@ a {
   background-color: rgba(255, 255, 255, 0.329);
 }
 
+@media screen and (max-width: 768px) {
+  .dash {
+    width: 150px;
+  }
+}
+
 /*  */
 /* NAVIGATION */
 /*  */
@@ -99,4 +105,47 @@ a {
 .stats {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+}
+
+.work-container {
+  min-height: 100vh;
+}
+.project-image {
+  box-shadow: 15px 15px 0px 0px rgba(255, 255, 255, 0.203);
+}
+.project-image:hover {
+  box-shadow: none;
+}
+
+.project-icon {
+  font-size: 20px;
+}
+.project-icon:hover {
+  color: #ffe9;
+  cursor: none;
+  transition: all 0.4s ease-in-out;
+}
+
+ul.skills-list {
+  list-style: none;
+  columns: 2;
+  padding: 10px 40px;
+}
+
+li::before {
+  content: "»";
+  margin-right: 10px;
+  color: #ffed29;
+  font-size: 24px;
+}
+
+li {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.703);
+  font-weight: 500;
+}
+
+ul.responsibility-list {
+  list-style: none;
+  padding: 10px 40px;
 }
