@@ -208,8 +208,8 @@ function Python() {
         gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop>
-        <stop offset="1" stop-color="#7F7F7F" stop-opacity="0"></stop>
+        <stop offset="0" stop-color="#B8B8B8" stopOpacity=".498"></stop>
+        <stop offset="1" stop-color="#7F7F7F" stopOpacity="0"></stop>
       </radialGradient>
       <path
         opacity=".444"
