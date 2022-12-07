@@ -19,7 +19,7 @@ function Hero() {
   }, []);
   const nameSize = useBreakpointValue(
     {
-      base: "5xl",
+      base: "42px",
       lg: "9xl",
     },
     {
@@ -66,7 +66,6 @@ function Hero() {
         </Text>
         <Text
           lineHeight={lineheight}
-          textAlign={"center"}
           fontWeight={"700"}
           fontSize={nameSize}
           color={"textColor"}
@@ -76,21 +75,26 @@ function Hero() {
         >
           Pranith Molakalapalli
         </Text>
-        <Flex className="typewriter" fontSize={size}>
+        <Flex
+          className="typewriter"
+          fontSize={size}
+          width={"100%"}
+          justifyContent={"center"}
+          color={"textColorLight"}
+        >
           {"<"}
           <Typewriter
             options={{
-              strings: ["Building", "Designing", "Learning"],
-              deleteSpeed: 50,
+              strings: ["Building", "Designing", "Learning", "Creating"],
+              deleteSpeed: 45,
               autoStart: true,
               loop: true,
-              cursor: " />",
+              cursor: "",
               cursorClassName: "typewriter-cursor",
             }}
           />
-          <Text pl={"5px"}>
-            <a href="">for the Web</a>
-          </Text>
+          {" /> "}
+          for the Web
         </Flex>
       </Box>
     </>
