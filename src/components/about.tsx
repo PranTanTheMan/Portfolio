@@ -18,7 +18,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import Styles from "../styles/about.module.css";
-import styled from "styled-components";
+
 import { Blob1 } from "./Icon/blob";
 import { Blob2 } from "./Icon/blob";
 import {
@@ -33,6 +33,7 @@ import {
 } from "./Icon/icons";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+
 export default function about() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -49,33 +50,6 @@ export default function about() {
     hiddenElements.forEach((el) => observer.observe(el));
   }, []);
 
-  const StyledText = styled.div`
-    ul.skills-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(140px, 200px));
-      padding: 0;
-      margin-top: 20px;
-      margin-left: 60px;
-      overflow: hidden;
-      list-style: none;
-      li {
-        position: relative;
-        padding-left: 20px;
-        color: rgba(180, 180, 180, 1);
-        font-weight: 600;
-        font-size: 24px;
-        &:before {
-          content: "»";
-          position: absolute;
-          padding-top: 12px;
-          left: 0;
-          line-height: 12px;
-          font-size: 24px;
-          color: #fff159de;
-        }
-      }
-    }
-  `;
   const skills = [
     "Javascript",
     "Typescript",
@@ -86,7 +60,7 @@ export default function about() {
     "CSS",
     "SCSS/SASS",
     "Figma",
-    "Adobe Photoshop",
+    "Photoshop",
     "React",
     "MongoDB",
   ];
@@ -156,7 +130,7 @@ export default function about() {
         <chakra.div className={Styles.who}>
           <Heading
             fontWeight={"700"}
-            fontSize={"42px"}
+            fontSize={{ base: "36px", md: "36px" }}
             display={"flex"}
             alignItems={"center"}
             mb={"10px"}
@@ -175,6 +149,7 @@ export default function about() {
             fontSize={"24px"}
             color={"textDark"}
             lineHeight={"25px"}
+            width={{ base: "90%", md: "479px" }}
             as={motion.p}
             style={{
               transform: isInView ? "none" : "translateY(100px)",
@@ -192,6 +167,7 @@ export default function about() {
             fontSize={"24px"}
             color={"textDark"}
             lineHeight={"25px"}
+            width={{ base: "90%", md: "479px" }}
             as={motion.p}
             style={{
               transform: isInView ? "none" : "translateY(100px)",
@@ -303,14 +279,10 @@ export default function about() {
           >
             Technolgies I use:
           </Text>
-          <StyledText>
-            <ul className="skills-list">
-              {skills &&
-                skills.map((skills, i) => (
-                  <li key={`skills-${i}`}>{skills}</li>
-                ))}
-            </ul>
-          </StyledText>
+          <ul className="skills-list">
+            {skills &&
+              skills.map((skills, i) => <li key={`skills-${i}`}>{skills}</li>)}
+          </ul>
         </chakra.div>
         <chakra.div className={Styles.stats}>
           <Box className={Styles.blob1} zIndex="-1">
@@ -344,6 +316,7 @@ export default function about() {
                 {progressData.map((data, i) => (
                   <>
                     <motion.span
+                      key={`progress-${i}`}
                       style={{
                         transform: isInView ? "none" : "translateX(200px)",
                         opacity: isInView ? 1 : 0,
