@@ -9,6 +9,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Footer from "@components/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -27,11 +28,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <div className="cursor">
         <Head>
           <title>{META.title}</title>
-          <link rel="icon" href="/pranith.jpeg" />
+          <link rel="icon" href="/Pranith-modified.ico" />
         </Head>
         <ChakraProvider theme={theme}>
           <Header />
           <Component {...pageProps} />
+          <Analytics />
           <Footer />
         </ChakraProvider>
       </div>
