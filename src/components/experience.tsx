@@ -25,7 +25,11 @@ export default function experience() {
         my={"100px"}
       >
         <Center flexDirection={"column"}>
-          <Heading fontSize={"68px"} pl={{ base: "8px", md: "0px" }}>
+          <Heading
+            fontSize={"68px"}
+            pl={{ base: "8px", md: "0px" }}
+            id={"experience"}
+          >
             <chakra.span textColor={"textColorLight"} fontSize={"80px"}>
               {"<"}
             </chakra.span>

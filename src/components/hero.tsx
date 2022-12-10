@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
-import { Box, Text, Flex, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Flex,
+  useBreakpointValue,
+  VisuallyHidden,
+} from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 
 function Hero() {
@@ -55,7 +61,11 @@ function Hero() {
   );
   return (
     <>
-      <Box className={"hero-container"} transition={"all 0.5s ease-in-out"}>
+      <Box
+        className={"hero-container"}
+        transition={"all 0.5s ease-in-out"}
+        pl={{ base: "20px", md: "0" }}
+      >
         <Text
           fontWeight={"600"}
           fontSize={introSize}
@@ -97,6 +107,7 @@ function Hero() {
           for the Web
         </Flex>
       </Box>
+      <VisuallyHidden id="about">About</VisuallyHidden>
     </>
   );
 }

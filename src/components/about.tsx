@@ -258,7 +258,17 @@ export default function about() {
                   </Flex>
                 </ModalBody>
                 <ModalFooter>
-                  <Button onClick={onClose}>Close</Button>
+                  <Button
+                    variant={"unstyled"}
+                    border={"1px solid #ffffff35"}
+                    pl={"25px"}
+                    pr={"25px"}
+                    onClick={onClose}
+                    transition={"all 0.3s ease-in-out"}
+                    _hover={{ bg: "#fff159de", color: "black", cursor: "none" }}
+                  >
+                    Close
+                  </Button>
                 </ModalFooter>
               </ModalContent>
             </Modal>

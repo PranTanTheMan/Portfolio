@@ -27,7 +27,6 @@ const theme = extendTheme({
       html: {
         scrollBehavior: "smooth",
       },
-      
     }),
   },
 });

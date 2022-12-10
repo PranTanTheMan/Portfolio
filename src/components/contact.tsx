@@ -41,7 +41,11 @@ export default function contact() {
   return (
     <>
       <Center flexDirection={"column"} minHeight={"82vh"} pb={"120px"}>
-        <Heading fontSize={"62px"} pl={{ base: "8px", md: "8px" }}>
+        <Heading
+          fontSize={"62px"}
+          pl={{ base: "8px", md: "8px" }}
+          id={"contact"}
+        >
           <chakra.span textColor={"textColorLight"} fontSize={"80px"}>
             {"<"}
           </chakra.span>

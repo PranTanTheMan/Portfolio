@@ -7,7 +7,12 @@ export default function Work() {
   return (
     <>
       <Center flexDirection={"column"}>
-        <Heading fontSize={"72px"} mt={"40px"} pl={{ base: "7px", md: "0px" }}>
+        <Heading
+          fontSize={"72px"}
+          mt={"40px"}
+          pl={{ base: "7px", md: "0px" }}
+          id={"projects"}
+        >
           <chakra.span textColor={"textColorLight"} fontSize={"80px"}>
             {"<"}
           </chakra.span>

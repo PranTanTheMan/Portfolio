@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap");
 
-*::-webkit-scrollbar {
+/* Style the scrollbar */
+::-webkit-scrollbar {
   display: none;
 }
+
+/* Style the thumb (the part that you drag) */
 
 .cursor {
   cursor: none;
@@ -12,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  behavior: smooth;
 }
 
 html,
