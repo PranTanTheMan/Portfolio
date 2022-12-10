@@ -189,7 +189,6 @@ export default function about() {
               opacity={"0.5"}
               _hover={{
                 textDecoration: "#fff159de underline",
-                cursor: "none",
               }}
               onClick={() => {
                 setOverlay(<Overlay />);
@@ -205,11 +204,7 @@ export default function about() {
               motionPreset="slideInBottom"
             >
               {overlay}
-              <ModalContent
-                bgColor={"#44133d"}
-                cursor={"none"}
-                className={Styles.modalContent}
-              >
+              <ModalContent bgColor={"#44133d"} className={Styles.modalContent}>
                 <ModalHeader fontWeight={"700"} fontSize={"25px"}>
                   Additional Information
                 </ModalHeader>
@@ -265,7 +260,7 @@ export default function about() {
                     pr={"25px"}
                     onClick={onClose}
                     transition={"all 0.3s ease-in-out"}
-                    _hover={{ bg: "#fff159de", color: "black", cursor: "none" }}
+                    _hover={{ bg: "#fff159de", color: "black" }}
                   >
                     Close
                   </Button>

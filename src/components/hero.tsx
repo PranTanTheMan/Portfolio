@@ -81,7 +81,6 @@ function Hero() {
           color={"textColor"}
           className={"hero-name"}
           transition={"all 0.5s ease-in-out"}
-          _hover={{ cursor: "none" }}
         >
           Pranith Molakalapalli
         </Text>
