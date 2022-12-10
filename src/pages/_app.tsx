@@ -10,8 +10,6 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Footer from "@components/footer";
 
-import "custom-cursor-react/dist/index.css";
-
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
