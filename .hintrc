@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "development"
-  ],
+  "extends": ["development"],
   "hints": {
     "axe/structure": [
       "default",
@@ -12,11 +10,7 @@
     "compat-api/css": [
       "default",
       {
-        "ignore": [
-          "backdrop-filter",
-          "scrollbar-width",
-          "scrollbar-color"
-        ]
+        "ignore": []
       }
     ],
     "typescript-config/strict": "off"
