@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.13",
-    "@chakra-ui/react": "^2.4.1",
+    "@chakra-ui/react": "^2.4.3",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@react-three/fiber": "^7.0.29",
