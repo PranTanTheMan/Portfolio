@@ -12,6 +12,8 @@ export default function Work() {
           mt={"40px"}
           pl={{ base: "7px", md: "0px" }}
           id={"projects"}
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           <chakra.span textColor={"textColorLight"} fontSize={"80px"}>
             {"<"}
@@ -27,6 +29,8 @@ export default function Work() {
           fontWeight={"600"}
           textAlign={"center"}
           textColor={"textColorMed"}
+          data-aos="fade-up"
+          data-aos-duration="1200"
         >
           An array of projects that I have worked on individually, in
           Hackathons, Team projects, and non-profit organizations.
