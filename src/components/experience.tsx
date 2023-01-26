@@ -74,7 +74,8 @@ export default function experience() {
             </Button>
           </Link>
           {/*  */}
-          <Link href={"/Pranith-Resume.pdf"} download target={"_blank"}>
+          {/* Change the resume pdf. */}
+          {/* <Link href={"/Pranith-Resume.pdf"} download target={"_blank"}>
             <Button
               p={"10px 30px 35px 30px"}
               bg={"#ffed29"}
@@ -92,7 +93,7 @@ export default function experience() {
                 <Icon as={DownloadIcon} />
               </Flex>
             </Button>
-          </Link>
+          </Link> */}
         </HStack>
       </Flex>
     </>
