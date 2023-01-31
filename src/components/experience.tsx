@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import JobCard from "./jobCard";
 import Link from "next/link";
-import { DownloadIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function experience() {
   return (
