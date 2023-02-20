@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { PuffLoader } from "react-spinners";
+import { HashLoader } from "react-spinners";
 import Hero from "@components/hero";
 import About from "@components/about";
 import Work from "@components/work";
@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     // Add a delay of 2 seconds before setting isLoading to false
-    const delay = 2000;
+    const delay = 2500;
     setTimeout(() => {
       setIsLoading(false);
     }, delay);
@@ -21,7 +21,7 @@ export default function Home() {
     <div>
       {isLoading ? (
         <div className="spinner">
-          <PuffLoader color={"#ffed29"} loading={isLoading} />
+          <HashLoader size={"200px"} color={"#ffed29"} loading={isLoading} />
         </div>
       ) : (
         <>
