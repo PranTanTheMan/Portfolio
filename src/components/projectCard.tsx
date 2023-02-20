@@ -1,10 +1,9 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 import {
   Image,
   Text,
   Heading,
   Flex,
-  IconButton,
   Spacer,
   Stack,
   Badge,
@@ -69,7 +68,7 @@ export default function projectCard() {
       to: "https://www.resumate.tech/",
       github: "https://github.com/siddharthd0/ResumeBuilder/tree/main",
       tech: ["Next.js", "Chakra UI", "TypeScript", "NLP", "Firebase"],
-    }
+    },
   ];
   return (
     <>
