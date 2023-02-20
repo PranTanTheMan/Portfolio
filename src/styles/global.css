@@ -21,6 +21,24 @@ body {
   padding: 0;
 }
 
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: linear-gradient(
+    to right bottom,
+    #56174d,
+    #4d1545,
+    #44133d,
+    #3b1136,
+    #330f2e
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 a {
   text-decoration: none;
 
@@ -121,9 +139,9 @@ a {
   font-size: 20px;
 }
 .project-icon:hover {
-  color: #ffe9;
-
+  color: rgba(255, 255, 0, 0.246);
   transition: all 0.4s ease-in-out;
+  z-index: 1;
 }
 
 ul.skills-list {

@@ -1,7 +1,13 @@
 import React from "react";
 import { Box, Flex, Spacer, Heading, Text, Divider } from "@chakra-ui/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function jobCard() {
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const jobs = [
     {
       Title: "Tech Optimum",
@@ -48,6 +54,9 @@ export default function jobCard() {
             borderRadius={"1px"}
             py={"10px"}
             px={"15px"}
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            data-aos-delay={i * 100}
           >
             <Flex alignItems={"center"}>
               <Flex flexDirection={"column"} textAlign={"left"}>

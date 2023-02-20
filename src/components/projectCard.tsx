@@ -1,4 +1,4 @@
-import React from "react";
+import {useEffect} from "react";
 import {
   Image,
   Text,
@@ -9,11 +9,18 @@ import {
   Stack,
   Badge,
   Wrap,
+  Icon,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function projectCard() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const projectDeets = [
     {
       image: "/project(1).png",
@@ -55,6 +62,14 @@ export default function projectCard() {
       github: "https://github.com/School-Simplified",
       tech: ["Next.js", "Chakra UI", "TypeScript", "Framer-motion"],
     },
+    {
+      image: "/project(6).png",
+      title: "Resumate",
+      description: "Resume generator and resume feedback",
+      to: "https://www.resumate.tech/",
+      github: "https://github.com/siddharthd0/ResumeBuilder/tree/main",
+      tech: ["Next.js", "Chakra UI", "TypeScript", "NLP", "Firebase"],
+    }
   ];
   return (
     <>
@@ -66,6 +81,9 @@ export default function projectCard() {
             flexDirection={"column"}
             width={"400px"}
             key={i}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay={i * 150}
           >
             <Image
               src={project.image}
@@ -87,21 +105,22 @@ export default function projectCard() {
                 {project.title}
               </Heading>
               <Spacer />
-              <Stack direction={"row"} gap={"7px"}>
-                <IconButton
+              <Stack direction={"row"} gap={"7px"} mt={"10px"}>
+                <Icon
                   aria-label="website"
-                  icon={<ExternalLinkIcon color="#ffed29" />}
-                  variant={"unstyled"}
+                  as={ExternalLinkIcon}
                   className={"project-icon"}
                   onClick={() => window.open(project.to, "_blank")}
+                  color="#ffed29"
+                  transition={"all 0.2s ease-in-out"}
                 />
-                <IconButton
+                <Icon
                   aria-label="github"
-                  icon={<FaGithub color="#ffed29" />}
-                  variant={"unstyled"}
-                  pt={"5px"}
+                  as={FaGithub}
                   className={"project-icon"}
                   onClick={() => window.open(project.github, "_blank")}
+                  color="#ffed29"
+                  transition={"all 0.2s ease-in-out"}
                 />
               </Stack>
             </Flex>

@@ -330,7 +330,7 @@ export default function about() {
                         transitionDelay: `${i * 0.2}s`,
                       }}
                     >
-                      <Icon as={data.logo} />
+                      <Icon key={i} as={data.logo} />
                     </motion.span>
                     <motion.div
                       key={i}
@@ -341,7 +341,7 @@ export default function about() {
                           "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1)",
                         transitionDelay: "0.5s",
                       }}
-                    >
+                    > 
                       <Progress
                         key={`progress-${i}`}
                         value={data.value}

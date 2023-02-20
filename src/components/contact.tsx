@@ -15,7 +15,14 @@ import {
   FiTwitter,
 } from "react-icons/fi";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function contact() {
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   const icons = [
     {
       icon: <FiGithub />,
@@ -45,6 +52,9 @@ export default function contact() {
           fontSize={"62px"}
           pl={{ base: "8px", md: "8px" }}
           id={"contact"}
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-delay="300"
         >
           <chakra.span textColor={"textColorLight"} fontSize={"80px"}>
             {"<"}
@@ -61,6 +71,9 @@ export default function contact() {
           textAlign={"center"}
           textColor={"textColorMed"}
           mb={"45px"}
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-delay="450"
         >
           You know who I am, you know what I do, and now you know how to reach
           me. What are you waiting for?
@@ -72,12 +85,15 @@ export default function contact() {
           fontSize={"28px"}
           textAlign={"center"}
           mb={"15px"}
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-delay="650"
         >
           Let's Connect
         </Heading>
-        <HStack spacing={15}>
-          {icons.map((icons) => (
-            <Link href={icons.to} target={"_blank"}>
+        <HStack spacing={15} data-aos-delay="500">
+          {icons.map((icons, i) => (
+            <Link href={icons.to} target={"_blank"} key={i}>
               <IconButton
                 variant={"unstyled"}
                 border={"1px solid #ffe4"}
@@ -86,6 +102,10 @@ export default function contact() {
                 size={"md"}
                 display={"flex"}
                 _hover={{ bg: "#ffed29", color: "#000" }}
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+                data-aos-delay={i * 150}
+                key={i}
               />
             </Link>
           ))}

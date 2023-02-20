@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   Box,
   Text,
@@ -7,21 +7,13 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Hero() {
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-        } else {
-          entry.target.classList.remove("animate");
-        }
-      });
-    });
-    const hiddenElements = document.querySelectorAll(".hidden");
-    hiddenElements.forEach((el) => observer.observe(el));
+    AOS.init();
+    AOS.refresh();
   }, []);
   const nameSize = useBreakpointValue(
     {
@@ -71,6 +63,9 @@ function Hero() {
           fontSize={introSize}
           color={"textColorLight"}
           transition={"all 0.5s ease-in-out"}
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="400"
         >
           Hi, my name is
         </Text>
@@ -79,7 +74,6 @@ function Hero() {
           fontWeight={"700"}
           fontSize={nameSize}
           color={"textColor"}
-          className={"hero-name"}
           transition={"all 0.5s ease-in-out"}
         >
           Pranith Molakalapalli
@@ -90,6 +84,9 @@ function Hero() {
           width={"100%"}
           justifyContent={"center"}
           color={"textColorLight"}
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="900"
         >
           {"<"}
           <Typewriter

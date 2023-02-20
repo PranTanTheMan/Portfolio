@@ -12,8 +12,15 @@ import {
 import JobCard from "./jobCard";
 import Link from "next/link";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 export default function experience() {
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <Flex
@@ -29,6 +36,8 @@ export default function experience() {
             fontSize={"68px"}
             pl={{ base: "8px", md: "0px" }}
             id={"experience"}
+            data-aos="zoom-in"
+            data-aos-duration="1000"
           >
             <chakra.span textColor={"textColorLight"} fontSize={"80px"}>
               {"<"}
@@ -45,6 +54,8 @@ export default function experience() {
             textAlign={"center"}
             textColor={"textColorMed"}
             mb={"30px"}
+            data-aos="fade-up"
+            data-aos-duration="1000"
           >
             A few of the non-profit organizations and companies that I have
             worked for and the responsbilities I present(ed) during my time
@@ -53,7 +64,7 @@ export default function experience() {
         </Center>
         {/* Component */}
         <JobCard />
-
+        {/*  */}
         <HStack maxWidth={"500px"}>
           <Link
             href={"https://www.linkedin.com/in/pranith-molakalapalli/"}

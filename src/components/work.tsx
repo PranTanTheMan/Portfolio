@@ -1,9 +1,12 @@
-import React from "react";
+
 import { Text, Heading, Center, chakra, Button } from "@chakra-ui/react";
 import ProjectCard from "./projectCard";
 import Link from "next/link";
 
+
 export default function Work() {
+
+
   return (
     <>
       <Center flexDirection={"column"}>
@@ -12,8 +15,7 @@ export default function Work() {
           mt={"40px"}
           pl={{ base: "7px", md: "0px" }}
           id={"projects"}
-          data-aos="fade-up"
-          data-aos-duration="1000"
+          
         >
           <chakra.span textColor={"textColorLight"} fontSize={"80px"}>
             {"<"}
@@ -29,8 +31,8 @@ export default function Work() {
           fontWeight={"600"}
           textAlign={"center"}
           textColor={"textColorMed"}
-          data-aos="fade-up"
-          data-aos-duration="1200"
+          
+    
         >
           An array of projects that I have worked on individually, in
           Hackathons, Team projects, and non-profit organizations.
@@ -44,12 +46,13 @@ export default function Work() {
           fontSize={"28px"}
           textAlign={"center"}
           mt={"20px"}
+          
         >
           Featured
         </Heading>
         <ProjectCard />
         <Center>
-          <Link href={"https://github.com/prantantheman"}>
+          <Link href={"https://github.com/prantantheman"} target={"_blank"}>
             <Button
               mt={"50px"}
               border={"1px solid #ffed29"}
