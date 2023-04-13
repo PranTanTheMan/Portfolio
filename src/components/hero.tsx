@@ -9,6 +9,7 @@ import {
 import Typewriter from "typewriter-effect";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 function Hero() {
   useEffect(() => {
@@ -53,58 +54,76 @@ function Hero() {
   );
   return (
     <>
-      <Box
-        className={"hero-container"}
-        transition={"all 0.5s ease-in-out"}
-        pl={{ base: "20px", md: "0" }}
-      >
-        <Text
-          fontWeight={"600"}
-          fontSize={introSize}
-          color={"textColorLight"}
-          transition={"all 0.5s ease-in-out"}
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-          data-aos-delay="400"
-        >
-          Hi, my name is
-        </Text>
-        <Text
-          lineHeight={lineheight}
-          fontWeight={"700"}
-          fontSize={nameSize}
-          color={"textColor"}
-          transition={"all 0.5s ease-in-out"}
-        >
-          Pranith Molakalapalli
-        </Text>
-        <Flex
-          className="typewriter"
-          fontSize={size}
-          width={"100%"}
-          justifyContent={"center"}
-          color={"textColorLight"}
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-          data-aos-delay="900"
-        >
-          {"<"}
-          <Typewriter
-            options={{
-              strings: ["Building", "Designing", "Learning", "Creating"],
-              deleteSpeed: 45,
-              autoStart: true,
-              loop: true,
-              cursor: "",
-              cursorClassName: "typewriter-cursor",
-            }}
-          />
-          {" /> "}
-          for the Web
-        </Flex>
+      <Box className={"hero-container"}>
+        <ZoomIn delay={0.2} scale={1}>
+          <Text
+            fontWeight={"600"}
+            fontSize={introSize}
+            color={"textColorLight"}
+          >
+            Hi, my name is
+          </Text>
+        </ZoomIn>
+        <ZoomIn delay={0.6} scale={1}>
+          <Text
+            lineHeight={lineheight}
+            fontWeight={"700"}
+            fontSize={nameSize}
+            color={"textColor"}
+          >
+            Pranith Molakalapalli
+          </Text>
+        </ZoomIn>
+        <ZoomIn delay={1} scale={1}>
+          <Flex
+            className="typewriter"
+            fontSize={size}
+            width={"100%"}
+            justifyContent={"center"}
+            color={"textColorLight"}
+          >
+            {"<"}
+            <Typewriter
+              options={{
+                strings: ["Building", "Designing", "Learning", "Creating"],
+                deleteSpeed: 45,
+                autoStart: true,
+                loop: true,
+                cursor: "",
+                cursorClassName: "typewriter-cursor",
+              }}
+            />
+            {" /> "}
+            for the Web
+          </Flex>
+        </ZoomIn>
       </Box>
       <VisuallyHidden id="about">About</VisuallyHidden>
     </>
+  );
+}
+
+function ZoomIn({ delay = 0, scale = 0, children }) {
+  const variants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      scale,
+      transition: {
+        delay,
+        duration: 0.4,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  return (
+    <motion.div variants={variants} initial="hidden" animate="visible">
+      {children}
+    </motion.div>
   );
 }
 

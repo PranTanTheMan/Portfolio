@@ -1,6 +1,5 @@
 import "styles/global.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import Header from "@components/header";
 import theme from "@styles/theme";
 import { pageview } from "@lib/gtag";
 import { META } from "config";
@@ -31,7 +30,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <link rel="icon" href="/Pranith-modified.ico" />
         </Head>
         <ChakraProvider theme={theme}>
-          <Header />
           <Component {...pageProps} />
           <Analytics />
           <Footer />

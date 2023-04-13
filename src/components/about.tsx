@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   Text,
   Box,
@@ -141,6 +141,7 @@ export default function about() {
               transition: "all 0.5s ease-in-out",
               transitionDelay: "0.2s",
             }}
+            id="#about-me"
           >
             Who Am I? <chakra.div className="dash"></chakra.div>
           </Heading>
@@ -341,7 +342,7 @@ export default function about() {
                           "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1)",
                         transitionDelay: "0.5s",
                       }}
-                    > 
+                    >
                       <Progress
                         key={`progress-${i}`}
                         value={data.value}

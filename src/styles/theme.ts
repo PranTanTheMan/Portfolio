@@ -10,6 +10,7 @@ const theme = extendTheme({
     textDark: "rgba(180, 180, 180, 1)",
     bgColorLight: "rgba(255, 255, 255, 0.103)",
     textColorHover: "#e9e9e9",
+    bg: "#330f2e87",
   },
   fonts: {
     body: "Darker Grotesque, sans-serif",
@@ -19,7 +20,8 @@ const theme = extendTheme({
     global: () => ({
       body: {
         fontFamily: "Darker Grotesque",
-        backgroundImage: "linear-gradient(to right bottom, #56174d, #4d1545, #44133d, #3b1136, #330f2e);",
+        backgroundImage:
+          "linear-gradient(to right bottom, #56174d, #4d1545, #44133d, #3b1136, #330f2e);",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
         color: "white",

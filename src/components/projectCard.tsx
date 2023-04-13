@@ -72,7 +72,12 @@ export default function projectCard() {
   ];
   return (
     <>
-      <Wrap spacing={30} justify={"center"} pl={{ base: "10px", md: "0px" }}>
+      <Wrap
+        spacing={30}
+        justify={"center"}
+        pl={{ base: "10px", md: "0px" }}
+        id="#projecto"
+      >
         {projectDeets.map((project, i) => (
           <Flex
             alignItems={"left"}

@@ -5,13 +5,14 @@ import About from "@components/about";
 import Work from "@components/work";
 import Experience from "@components/experience";
 import Contact from "@components/contact";
+import Header from "@components/header";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Add a delay of 2 seconds before setting isLoading to false
-    const delay = 2500;
+    const delay = 1500;
     setTimeout(() => {
       setIsLoading(false);
     }, delay);
@@ -25,6 +26,7 @@ export default function Home() {
         </div>
       ) : (
         <>
+          <Header />
           <Hero />
           <About />
           <Work />
