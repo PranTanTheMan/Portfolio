@@ -28,5 +28,12 @@
     "incremental": true
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "src/components/work.jsx"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/work.jsx",
+    "src/components/header.jsx",
+    "src/components/contact.jsx",
+    "src/components/about.jsx"
+  ]
 }
