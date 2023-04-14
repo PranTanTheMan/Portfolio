@@ -108,6 +108,14 @@ function Navbar() {
             mb={{ base: 4, md: 0 }}
             fontSize={{ base: "xl", md: "xl" }}
             fontWeight={"semibold"}
+            _hover={{
+              textDecoration: "none",
+              textDecorationThickness: "2px",
+              transition: "all 0.3s ease-in-out",
+              color: "#a42a92",
+              transform: "translateY(-2px)",
+              textShadow: "0 2px 4px rgba(0,0,0,0.2)",
+            }}
           >
             Projects
           </Text>
@@ -118,12 +126,31 @@ function Navbar() {
             mb={{ base: 4, md: 0 }}
             fontSize={{ base: "xl", md: "xl" }}
             fontWeight={"semibold"}
+            _hover={{
+              textDecoration: "none",
+              textDecorationThickness: "2px",
+              transition: "all 0.3s ease-in-out",
+              color: "#a42a92",
+              transform: "translateY(-2px)",
+              textShadow: "0 2px 4px rgba(0,0,0,0.2)",
+            }}
           >
             Experience
           </Text>
         </Link>
         <Link href="#contact">
-          <Text fontWeight={"semibold"} fontSize={{ base: "xl", md: "xl" }}>
+          <Text
+            fontWeight={"semibold"}
+            fontSize={{ base: "xl", md: "xl" }}
+            _hover={{
+              textDecoration: "none",
+              textDecorationThickness: "2px",
+              transition: "all 0.3s ease-in-out",
+              color: "#a42a92",
+              transform: "translateY(-2px)",
+              textShadow: "0 2px 4px rgba(0,0,0,0.2)",
+            }}
+          >
             Contact
           </Text>
         </Link>
