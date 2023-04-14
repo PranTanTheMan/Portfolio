@@ -101,7 +101,10 @@ export default function contact() {
                 icon={icons.icon}
                 size={"md"}
                 display={"flex"}
-                _hover={{ bg: "#ffed29", color: "#000" }}
+                _hover={{
+                  bg: "#ffed29",
+                  color: "#000",
+                }}
                 data-aos="zoom-in"
                 data-aos-duration="2000"
                 data-aos-delay={i * 150}

@@ -14,8 +14,8 @@ const META: MetaType = {
   title: "Pranith's Portfolio",
   lang: "en-us",
   description: "Portfolio created by Pranith Molakalapalli ",
-  url: "",
-  image: "/Pranith.jpeg",
+  url: "https://www.prani.tech",
+  image: "/PortfolioBanner.svg",
   tags: [
     "nextjs",
     "typescript",
@@ -25,6 +25,10 @@ const META: MetaType = {
     "jest",
     "styled components",
     "icons",
+    "react",
+    "portfolio",
+    "pranith",
+    "molakalapalli",
   ],
 };
 
