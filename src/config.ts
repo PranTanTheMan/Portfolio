@@ -15,7 +15,7 @@ const META: MetaType = {
   lang: "en-us",
   description: "Portfolio created by Pranith Molakalapalli ",
   url: "https://www.prani.tech",
-  image: "/PortfolioBanner.svg",
+  image: "/Portfolio Banner.png",
   tags: [
     "nextjs",
     "typescript",

@@ -22,7 +22,7 @@ export default function Home() {
     <div>
       {isLoading ? (
         <div className="spinner">
-          <HashLoader size={"200px"} color={"#ffed29"} loading={isLoading} />
+          <HashLoader size={"100px"} color={"#ffed29"} loading={isLoading} />
         </div>
       ) : (
         <>
