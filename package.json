@@ -33,7 +33,7 @@
     "react-icons": "^4.7.1",
     "react-spinners": "^0.13.8",
     "styled-components": "^5.3.6",
-    "three": "^0.148.0",
+    "three": "^0.152.0",
     "tsparticles": "^2.7.1",
     "typewriter-effect": "^2.19.0"
   },
