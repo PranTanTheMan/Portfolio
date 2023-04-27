@@ -83,7 +83,12 @@ function Navbar() {
         ml={{ base: 5, md: 0 }}
         textDecoration="none"
       >
-        <Link href="#about">
+        <Link
+          _hover={{
+            textDecoration: "none !important",
+          }}
+          href="#about"
+        >
           <Text
             mr={{ base: 0, md: 6 }}
             mb={{ base: 4, md: 0 }}
@@ -91,8 +96,8 @@ function Navbar() {
             fontWeight={"semibold"}
             transition="all 0.3s ease-in-out"
             _hover={{
-              textDecoration: "none",
-              textDecorationThickness: "2px",
+              textDecoration: "none !important",
+
               transition: "all 0.3s ease-in-out",
               color: "#a42a92",
               transform: "translateY(-2px)",
@@ -102,7 +107,12 @@ function Navbar() {
             About me
           </Text>
         </Link>
-        <Link href="#projects">
+        <Link
+          _hover={{
+            textDecoration: "none !important",
+          }}
+          href="#projects"
+        >
           <Text
             mr={{ base: 0, md: 6 }}
             mb={{ base: 4, md: 0 }}
@@ -120,7 +130,12 @@ function Navbar() {
             Projects
           </Text>
         </Link>
-        <Link href="#experience">
+        <Link
+          _hover={{
+            textDecoration: "none !important",
+          }}
+          href="#experience"
+        >
           <Text
             mr={{ base: 0, md: 6 }}
             mb={{ base: 4, md: 0 }}
@@ -138,7 +153,12 @@ function Navbar() {
             Experience
           </Text>
         </Link>
-        <Link href="#contact">
+        <Link
+          _hover={{
+            textDecoration: "none !important",
+          }}
+           href="#contact"
+        >
           <Text
             fontWeight={"semibold"}
             fontSize={{ base: "xl", md: "xl" }}
